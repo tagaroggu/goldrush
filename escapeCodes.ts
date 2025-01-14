@@ -84,3 +84,8 @@ export const eraseToEndOfLine = `${escape}0K`;
  * Erase from the current cursor position to the beginning of the line.
  */
 export const eraseToBeginningOfLine = `${escape}1K`;
+
+/**
+ * Erase the entire current line.
+ */
+export const eraseLine = `${escape}2K`;
