@@ -8,10 +8,15 @@ import { escape } from './escapeCodes.ts';
  */
 export function loadingBar(dependencies: Promise<unknown>[]) {
 	const promise = Promise.withResolvers();
-	const statuses = Array.from({ length: dependencies.length }).fill(false) as boolean[];
+	const statuses = Array.from({ length: dependencies.length }).fill(
+		false,
+	) as boolean[];
 	const encoder = new TextEncoder();
 	function render() {
-		const count = statuses.reduce((acc, current) => acc + (current ? 1 : 0), 0);
+		const count = statuses.reduce(
+			(acc, current) => acc + (current ? 1 : 0),
+			0,
+		);
 		// Out of 20 instead of out of 100. 100 is too wide. Maybe I should make a big one?
 		const percentage = Math.round(count / statuses.length * 20);
 		Deno.stdout.write(
