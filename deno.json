@@ -4,7 +4,8 @@
 	"exports": {
 		".": "./mod.ts",
 		"./escapeCodes": "./escapeCodes.ts",
-		"./loadingBar": "./loadingBar.ts"
+		"./loadingBar": "./loadingBar.ts",
+		"./spinner": "./spinner.ts"
 	},
 	"lint": {
 		"include": ["./**/*.ts"],
