@@ -1,7 +1,11 @@
 {
 	"name": "@tagaroggu/goldrush",
 	"version": "0.0.0",
-	"exports": "./mod.ts",
+	"exports": {
+		".": "./mod.ts",
+		"./escapeCodes": "./escapeCodes",
+		"./loadingBar": "./loadingBar.ts"
+	},
 	"lint": {
 		"include": ["./**/*.ts"],
 		"rules": {
