@@ -1,5 +1,11 @@
 import { escape } from './escapeCodes.ts';
 
+/**
+ * Renders a loading bar to the console. Once all dependencies resolve or
+ * one rejects, the returned promise resolves or rejects accordingly.
+ * @param { Promise<unknown>[] } dependencies Array of dependencies as promises
+ * @returns { Promise<void> } When dependencies have all resolved or one rejects
+ */
 export function loadingBar(dependencies: Promise<unknown>[]) {
 	const promise = Promise.withResolvers();
 	const statuses = Array.from({ length: dependencies.length }).fill(false) as boolean[];
