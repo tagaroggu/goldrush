@@ -79,3 +79,8 @@ export const eraseScreen = `${escape}2J`;
  * Erase from the current cursor position to the end of the line.
  */
 export const eraseToEndOfLine = `${escape}0K`;
+
+/**
+ * Erase from the current cursor position to the beginning of the line.
+ */
+export const eraseToBeginningOfLine = `${escape}1K`;
