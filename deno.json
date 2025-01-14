@@ -1,0 +1,24 @@
+{
+	"name": "@tagaroggu/goldrush",
+	"version": "0.0.0",
+	"exports": "./mod.ts",
+	"lint": {
+		"include": ["./**/*.ts"],
+		"rules": {
+			"tags": ["recommended"]
+		}
+	},
+	"fmt": {
+		"useTabs": true,
+		"lineWidth": 90,
+		"indentWidth": 4,
+		"semiColons": true, 
+		"singleQuote": true,
+		"proseWrap": "preserve",
+		"include": ["./**/*.ts"]
+	},
+	"test": ["./**/*.test.ts"],
+	"publish": {
+		"exclude": ["./**/*.test.ts"]
+	}
+}
