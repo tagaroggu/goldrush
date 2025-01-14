@@ -59,3 +59,8 @@ export const moveCursorUpToBeginning = (x: number = 1) => `${escape}${x}F`;
  * Moves the cursor to column x. Defaults to the first column, column 0.
  */
 export const moveCursorToColumn = (x: number = 0) => `${escape}${x}G`;
+
+/**
+ * Erase from the current cursor position to the end of the screen.
+ */
+export const eraseToEndOfScreen = `${escape}0J`;
